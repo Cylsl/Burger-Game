@@ -111,10 +111,11 @@ h1 {
 }
 
 
+/*********************SLIDER*************/
 
 .slider-container {
   padding-top: 200px;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -175,28 +176,275 @@ h1 {
 .content img {
   -webkit-box-shadow: 11px 15px 28px 4px #000000;
   box-shadow: 11px 15px 28px 4px #ca2e8e;
-  width: 600px;
-  height: 600px;
+  width: 1100px;
+  height: 800px;
   border-radius: 20%;
   object-fit: cover;
   object-position: center;
 }
 
-@media (max-width: 670px) {
+/************** FOOTER *************/
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  padding: 70px 0;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col h4 {
+  font-size: 15px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 13px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/**************** RESPONSIVE ************/
+
+
+@media (max-width: 1200px) {
+  .content img {
+    height: 800px;
+    width: 900px;
+  }
+
+  .direction-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .direction-btn.right {
+    right: 15%;
+  }
+
+  .direction-btn.left {
+    left: 15%;
+  }
+}
+
+@media (max-width: 900px) {
+  .content img {
+    height: 700px;
+    width: 800px;
+  }
+
+  .direction-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .direction-btn.right {
+    right: 10%;
+  }
+
+  .direction-btn.left {
+    left: 10%;
+  }
+}
+
+@media (max-width: 800px) {
+  .content img {
+    height: 700px;
+    width: 700px;
+  }
+
+  .direction-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .direction-btn.right {
+    right: 10%;
+  }
+
+  .direction-btn.left {
+    left: 10%;
+  }
+}
+
+@media (max-width: 746px) {
+  .content img {
+    height: 600px;
+    width: 700px;
+  }
+
+  .direction-btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .direction-btn.right {
+    right: 10%;
+  }
+
+  .direction-btn.left {
+    left: 10%;
+  }
+}
+
+@media (max-width: 600px) {
+  .content img {
+    height: 500px;
+    width: 550px;
+  }
+
+  .direction-btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .direction-btn.right {
+    right: 5%;
+  }
+
+  .direction-btn.left {
+    left: 5%;
+  }
+}
+
+@media (max-width: 500px) {
   .content img {
     height: 400px;
-    width: 400px;
+    width: 470px;
+  }
+
+  .direction-btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .direction-btn.right {
+    right: 5%;
+  }
+
+  .direction-btn.left {
+    left: 5%;
   }
 }
 
 @media (max-width: 400px) {
   .content img {
     height: 300px;
-    width: 300px;
+    width: 350px;
   }
 
   .direction-btn {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
+    margin-top: 50px;
+  }
+
+  .direction-btn.right {
+    right: 10%;
+  }
+
+  .direction-btn.left {
+    left: 10%;
+  }
+}
+
+@media (max-width: 300px) {
+  .content img {
+    height: 210px;
+    width: 270px;
+  }
+
+  .slider-container {
+    padding-top: 100px;
+  }
+
+  .direction-btn {
+    width: 20px;
+    height: 20px;
+  }
+
+  .direction-btn.right {
+    right: 10%;
+  }
+
+  .direction-btn.left {
+    left: 10%;
+  }
+}
+
+@media (max-width: 200px) {
+  .content img {
+    height: 150px;
+    width: 170px;
+  }
+
+  .slider-container {
+    padding-top: 100px;
+  }
+
+  .direction-btn {
+    width: 10px;
+    height: 10px;
+  }
+
+  .direction-btn.right {
+    right: 10%;
+  }
+
+  .direction-btn.left {
+    left: 10%;
   }
 }
