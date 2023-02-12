@@ -124,10 +124,10 @@ h1::after {
   background: #ebebeb;
   right: -10px;
   top: 0;
-  animation: carret 1s infinite;
+  animation: caret 1s infinite;
 }
 
-@keyframes carret {
+@keyframes caret {
   0% {
     opacity: 1;
   }
