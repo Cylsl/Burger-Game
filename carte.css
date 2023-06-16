@@ -1,0 +1,245 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  cursor: none;
+}
+
+a,
+button,
+input,
+label,
+textarea,
+img {
+  cursor: none;
+}
+
+body {
+  font-family: Montserrat, Helvetica, sans-serif;
+  background: #111;
+}
+
+.custom-cursor {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #e3e3e3c1;
+  position: fixed;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.custom-cursor::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #111;
+  background: #f4f4f4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (pointer:coarse) {
+  .custom-cursor {
+    display: none;
+  }
+}
+
+nav {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+nav a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: clamp(14px, 2vw, 20px);
+  margin: 0 15px;
+  position: relative;
+}
+
+nav a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #6f6f6fd0;
+  width: 100%;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  transform-origin: left;
+  transform: scaleX(33%);
+  transition: transform 0.2s ease-out;
+}
+
+nav a:hover::before {
+  transform: scaleX(100%);
+  background: #f1f1f1;
+}
+
+.hero {
+  height: 50vh;
+  background: url(carte-medias/burger-carte.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+h1 {
+  font-size: clamp(24px, 8vw, 50px);
+  text-align: center;
+  padding-top: 70px;
+  font-weight: 800;
+  color: #f0f0f0;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, rgb(174, 235, 60), rgb(194, 27, 63));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.menu-img {
+  display: flex;
+  justify-content: center;
+  height: 200vh;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+@keyframes carret {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/********* FOOTER **********/
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  padding: 70px 0;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col h4 {
+  font-size: 15px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 13px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/********* RESPONSIVE ***********/
+
+@media screen and (max-width: 900px) {
+  .menu-img {
+    height: 180vh;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .menu-img {
+    height: 150vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menu-img {
+    height: 130vh;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .menu-img {
+    height: 110vh;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .menu-img {
+    height: 90vh;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .menu-img {
+    height: 70vh;
+  }
+}
